@@ -1,15 +1,13 @@
-# Cibersegurança - Portfólio de Estudos
+---
 
-Este repositório armazena meus projetos desenvolvidos durante o curso de Cibersegurança do Santander na DIO utilizando o ambiente mobile (Pydroid 3 no Android).
+## 🛠️ Novos Aprendizados (Estudos Autodidatas via IA e Google)
 
-## 🔐 Projetos Inclusos
+### 🔑 Gerador de Senhas Seguras (`gerador_senhas.py`)
+* **Módulo Secrets:** Entendi que para segurança não se usa o `random` comum, mas sim a biblioteca `secrets`, que gera dados imprevisíveis e criptograficamente seguros.
+* **Garantia de Regras:** Lógica estruturada para forçar a inclusão de letras maiúsculas, minúsculas, números e caracteres especiais, conversando com o validador de senhas.
 
-### 1. Cifra de César em Python (`cifra_cesar.py`)
-Script que implementa a Cifra de César para criptografar e descriptografar mensagens de texto.
-- **Foco:** Fundamentos de Criptografia Simétrica e manipulação de strings.
+### 🛡️ Verificador de Integridade (`verificador_integridade.py`)
+* **Pilar da Integridade:** Estudo prático da letra **I** da Tríade CIA, garantindo que arquivos ou mensagens não foram alterados por terceiros.
+* **Efeito Avalanche:** Observação de como a mudança de uma única letra altera completamente a assinatura digital (Hash SHA-256) gerada pela biblioteca `hashlib`.
 
-### 2. Validador de Senhas Fortes (`validador_senhas.py`)
-Programa que analisa os requisitos mínimos de segurança de uma senha (tamanho, maiúsculas, minúsculas, números e caracteres especiais).
-- **Foco:** Defesa cibernética, lógica booleana (True/False) e verificação de padrões de texto.
-
-
+*Nota: Códigos estruturados e analisados com o auxílio de IA no ambiente Pydroid 3 para consolidação de conceitos teóricos de segurança da informação.*
