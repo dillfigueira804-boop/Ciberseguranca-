@@ -1,4 +1,26 @@
----
+# 🛡️ AI Guardrail: Detector de Indirect Prompt Injection em PDFs
+
+Projeto prático desenvolvido durante a formação **Agentes de IA do Zero à Prática (DIO)**, focado em segurança para Modelos de Linguagem (OWASP Top 10 for LLMs - LLM01: Prompt Injection).
+
+## 📌 O Problema
+Sistemas e Agentes de IA que analisam documentos externos (como currículos em sistemas de RH ou petições em tribunais) não "enxergam" a página visualmente — eles extraem o texto bruto do arquivo. Pessoas mal-intencionadas aproveitam essa característica inserindo comandos ocultos (texto em **cor branca** e tamanho reduzido) para manipular a decisão do agente.
+
+## 💡 A Solução (Agente Guardrail v3)
+Desenvolvi um **Agente Guardrail em Python** (`Untitled2.ipynb`) utilizando a biblioteca `pypdf` que realiza uma auditoria dupla antes de liberar o documento para o modelo de linguagem principal:
+
+1. **Inspeção Forense de Stream PDF:** Analisa a estrutura interna do arquivo em busca de definições de cor branca (`1 1 1 rg` / `1.0 1.0 1.0 rg`), capturando textos ocultos mesmo quando formatados em tamanhos legíveis (como `8pt` em editores mobile).
+2. **Análise Semântica de Gatilhos:** Varre o texto extraído em busca de padrões clássicos de sequestro de instrução (*System Override*, *Ignore instruções anteriores*, etc.).
+
+## 🛠️ Tecnologias Utilizadas
+* **Python 3**
+* **Google Colab** (Ambiente de desenvolvimento e simulação)
+* **PyPDF & FPDF** (Geração de PDFs de teste, extração de texto e auditoria interna)
+
+## 🚀 Como Testar
+Clique no selo **"Open in Colab"** dentro do arquivo `Untitled2.ipynb` deste repositório e execute as células para simular um currículo com ataque de injeção e vê-lo ser bloqueado em tempo real (`🚨 STATUS: BLOQUEADO`).
+
+
+
 
 ## 🛠️ Novos Aprendizados (Estudos Autodidatas via IA e Google)
 
